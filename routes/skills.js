@@ -23,4 +23,9 @@ router.post('/', skillsCtrl.create)
 router.delete('/:id', skillsCtrl.delete)
 
 
+///to add EDIT Skill must use GET--> /skills/:id/edit
+router.get('/:id/edit', skillsCtrl.edit)
+
+router.put('/:id', skillsCtrl.update)
+
 module.exports = router;

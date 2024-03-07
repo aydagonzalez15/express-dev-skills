@@ -10,7 +10,14 @@ const skills = [
     getAll,
     getOne,
     create,
-    deleteOne
+    deleteOne,
+    edit
+  }
+
+  function edit(id, body) {
+    id = parseInt(id)
+    const idx = skills.findIndex(skill => skill.id === id) 
+    skills[idx] = body 
   }
 
   function deleteOne(id) {
